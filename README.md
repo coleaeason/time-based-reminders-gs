@@ -1,2 +1,2 @@
 # time-based-reminders-gs
-Time Based Email or Text Reminders for Google Sheets written in Google Script
+Time Based Email or Text Reminders for Google Sheets written in Google Script.
