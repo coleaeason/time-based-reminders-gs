@@ -16,7 +16,8 @@ function sendEmailsFridayEvent1() {
     var emailAddress = row[0];  // First column - email address to send message to 
     var message = row[1];       // Second column - message to send in the email
     var emailSent = row[2];     // Third column - whether or not the message has already been sent
-    if (emailSent != EMAIL_SENT) {  //  Checks to see if this reminder has already been sent to prevent sending duplicates      var subject = "Reminder!";	//Variable for Email subject
+    if (emailSent != EMAIL_SENT) {  //  Checks to see if this reminder has already been sent to prevent sending duplicates      
+      var subject = "Reminder!";	//Variable for Email subject
       MailApp.sendEmail(emailAddress, subject, message);
       sheet.getRange(startRow + i, 22).setValue(EMAIL_SENT); //sets the EMAIL_SENT value in Column C if email is successfully sent
       SpreadsheetApp.flush();  // Make sure the cell is updated right away in case the script is interrupted
